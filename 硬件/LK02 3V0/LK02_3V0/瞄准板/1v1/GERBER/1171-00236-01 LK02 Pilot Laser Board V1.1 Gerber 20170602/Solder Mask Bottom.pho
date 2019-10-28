@@ -1,0 +1,90 @@
+*
+*
+G04 PADS 9.5 Build Number: 522968 generated Gerber (RS-274-X) file*
+G04 PC Version=2.1*
+*
+%IN "laser sight 1V1.pcb"*%
+*
+%MOIN*%
+*
+%FSLAX35Y35*%
+*
+*
+*
+*
+G04 PC Standard Apertures*
+*
+*
+G04 Thermal Relief Aperture macro.*
+%AMTER*
+1,1,$1,0,0*
+1,0,$1-$2,0,0*
+21,0,$3,$4,0,0,45*
+21,0,$3,$4,0,0,135*
+%
+*
+*
+G04 Annular Aperture macro.*
+%AMANN*
+1,1,$1,0,0*
+1,0,$2,0,0*
+%
+*
+*
+G04 Odd Aperture macro.*
+%AMODD*
+1,1,$1,0,0*
+1,0,$1-0.005,0,0*
+%
+*
+*
+G04 PC Custom Aperture Macros*
+*
+*
+*
+*
+*
+*
+G04 PC Aperture Table*
+*
+%ADD010C,0.001*%
+%ADD031C,0.00394*%
+*
+*
+*
+*
+G04 PC Circuitry*
+G04 Layer Name laser sight 1V1.pcb - circuitry*
+%LPD*%
+*
+*
+G04 PC Custom Flashes*
+G04 Layer Name laser sight 1V1.pcb - flashes*
+%LPD*%
+*
+*
+G04 PC Circuitry*
+G04 Layer Name laser sight 1V1.pcb - circuitry*
+%LPD*%
+*
+G54D10*
+G54D31*
+G01X1921282Y1616706D02*
+X1980290D01*
+X1986445Y1599862*
+X2013541*
+X2019677Y1616745*
+X2078746*
+Y1583255*
+X1921254*
+Y1616718*
+X1921282*
+Y1616706*
+X2072035Y1595441D02*
+G75*
+G03X2072035I-4331J0D01*
+G01X1935421Y1606465D02*
+G03X1935421I-4331J0D01*
+G74*
+G01X0Y0D02*
+M02*

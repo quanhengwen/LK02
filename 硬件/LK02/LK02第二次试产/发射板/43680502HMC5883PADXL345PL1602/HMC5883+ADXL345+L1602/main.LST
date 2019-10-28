@@ -1,0 +1,61 @@
+C51 COMPILER V9.00   MAIN                                                                  07/28/2014 16:03:46 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: D:\KEIL 4\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <reg52.h>
+   2          #include <math.h>
+   3          #include <stdio.h>  
+   4          #include "1602.h"
+   5          #include "delay.h"
+   6          #include "HMC5883.h"
+   7          #include "ADXL345.h"
+   8          
+   9          #define uchar unsigned char
+  10          extern BYTE BUF[8];
+  11          
+  12          void main()
+  13          {
+  14   1              uchar devid;
+  15   1          int x,y,z;
+  16   1          double angle;       
+  17   1          init();
+  18   1          Init_ADXL345();
+  19   1          Init_HMC5883();
+  20   1              devid=Single_Read(ADXL345_SlaveAddress,0X00); //读出的数据为0XE5,表示正确
+  21   1          while(1)            //循环
+  22   1          { 
+  23   2                      Init_ADXL345();                //初始化ADXL345 
+  24   2                      Multiple_read(ADXL345_SlaveAddress,0x32);       //连续读出数据，存储在BUF中
+  25   2                      display_x();                   //---------显示X轴
+  26   2              display_y();                   //---------显示Y轴
+  27   2              display_z();                   //---------显示Z轴
+  28   2      
+  29   2                      Multiple_read_HMC5883();      //连续读出数据，存储在BUF中
+  30   2                  x=BUF[0] << 8 | BUF[1]; //Combine MSB and LSB of X Data output register
+  31   2                  z=BUF[2] << 8 | BUF[3]; //Combine MSB and LSB of Z Data output register
+  32   2                  y=BUF[4] << 8 | BUF[5]; //Combine MSB and LSB of Y Data output register
+  33   2              
+  34   2                  angle= atan2((double)y,(double)x) * (180 / 3.14159265) + 180; // angle in degrees
+  35   2                  angle*=10;
+  36   2                  conversion(angle);       //计算数据和显示                
+  37   2         }
+  38   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    163    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      11
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

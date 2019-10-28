@@ -1,0 +1,7 @@
+"1602.obj",
+"delay.obj",
+"main.obj",
+"HMC5883.obj",
+"ADXL345.obj" 
+TO "1602·ÖÄ£¿é" 
+RAMSIZE(256) 

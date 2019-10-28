@@ -1,0 +1,91 @@
+*
+*
+G04 PADS 9.5 Build Number: 522968 generated Gerber (RS-274-X) file*
+G04 PC Version=2.1*
+*
+%IN "RX_3V0.pcb"*%
+*
+%MOIN*%
+*
+%FSLAX35Y35*%
+*
+*
+*
+*
+G04 PC Standard Apertures*
+*
+*
+G04 Thermal Relief Aperture macro.*
+%AMTER*
+1,1,$1,0,0*
+1,0,$1-$2,0,0*
+21,0,$3,$4,0,0,45*
+21,0,$3,$4,0,0,135*
+%
+*
+*
+G04 Annular Aperture macro.*
+%AMANN*
+1,1,$1,0,0*
+1,0,$2,0,0*
+%
+*
+*
+G04 Odd Aperture macro.*
+%AMODD*
+1,1,$1,0,0*
+1,0,$1-0.005,0,0*
+%
+*
+*
+G04 PC Custom Aperture Macros*
+*
+*
+*
+*
+*
+*
+G04 PC Aperture Table*
+*
+%ADD010C,0.01*%
+%ADD048C,0.001*%
+%ADD085R,0.0415X0.0848*%
+%ADD086R,0.04937X0.10843*%
+*
+*
+*
+*
+G04 PC Circuitry*
+G04 Layer Name RX_3V0.pcb - circuitry*
+%LPD*%
+*
+*
+G04 PC Custom Flashes*
+G04 Layer Name RX_3V0.pcb - flashes*
+%LPD*%
+*
+*
+G04 PC Circuitry*
+G04 Layer Name RX_3V0.pcb - circuitry*
+%LPD*%
+*
+G54D10*
+G01X2041339Y1551575D02*
+G75*
+G03X2045276Y1555512I-0J3937D01*
+G01Y1644488*
+G03X2041339Y1648425I-3937J0*
+G01X1958661*
+G03X1954724Y1644488I0J-3937*
+G01Y1555512*
+G03X1958661Y1551575I3937J-0*
+G01X2041339*
+G54D48*
+G54D85*
+X1998150Y1605906D03*
+X2008150D03*
+G54D86*
+X2003150Y1590157D03*
+G74*
+X0Y0D02*
+M02*
